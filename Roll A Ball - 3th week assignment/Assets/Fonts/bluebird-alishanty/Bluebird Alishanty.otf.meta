@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 2761e8400465a9b42a3f8a917f357bd5
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Bluebird Alishanty
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 12c2953231e7b0c4a850a9646dd82dcd, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
