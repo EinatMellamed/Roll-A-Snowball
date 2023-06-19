@@ -37,7 +37,7 @@ public class Collisions : MonoBehaviour
             GameObject glitterEffect = Instantiate(pickUpEffect, other.transform.position, other.transform.rotation);
             transform.DOScale(transform.lossyScale * increase, scaleUpDuration).SetEase(ease);
             count += 1;
-          
+            EventManager.Instance.PlaySFX("PickUpSound");
             SetCountText();
             Destroy(glitterEffect, 2);
         }
@@ -53,6 +53,7 @@ public class Collisions : MonoBehaviour
         if (count >= 10)
         {
             canvas.GetComponent<UiManager>().OpenWinMenuPanel();
+           
             Time.timeScale = 0;
         }
     }

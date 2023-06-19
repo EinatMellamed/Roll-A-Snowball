@@ -28,6 +28,9 @@ public class UiManager : MonoBehaviour
        // CloseAllPanels();
        
         panels[1].SetActive(true);
+        EventManager.Instance.PlayMusic("Waiting");
+        EventManager.Instance.musicSource.volume = 0.7f;
+        EventManager.Instance.sfxSource.volume = 1f;
         gameIsOver = false;
         GameIsPaused = false;
     }
@@ -52,7 +55,8 @@ public class UiManager : MonoBehaviour
         CloseAllPanels();
         panels[5].SetActive(true);
         panels[6].SetActive(true);
-
+        EventManager.Instance.musicSource.volume = 0.7f;
+        EventManager.Instance.sfxSource.volume = 1f;
         Time.timeScale = 1f;
         GameIsPaused = false;
     }
@@ -64,6 +68,8 @@ public class UiManager : MonoBehaviour
     {
         Debug.Log("playing");
         CloseAllPanels();
+        EventManager.Instance.PlayMusic("BackgroundMusic");
+        EventManager.Instance.musicSource.volume = 0.7f;
         panels[5].SetActive(true);
         panels[6].SetActive(true);
         await Task.Delay(1000);
@@ -93,6 +99,8 @@ public class UiManager : MonoBehaviour
         {
             CloseAllPanels();
             panels[3].SetActive(true);
+            EventManager.Instance.PlayMusic("GameOverTheme");
+           
             Time.timeScale = 0f;
             gameIsOver = true;
         }
@@ -104,6 +112,8 @@ public class UiManager : MonoBehaviour
 
         CloseAllPanels();
         panels[4].SetActive(true);
+        EventManager.Instance.PlayMusic("WinTheme");
+        
         Time.timeScale = 0f;
     }
 
@@ -113,7 +123,8 @@ public class UiManager : MonoBehaviour
 
         CloseAllPanels();
         panels[2].SetActive(true);
-        
+        EventManager.Instance.musicSource.volume = 0.1f;
+        EventManager.Instance.sfxSource.volume = 0.1f;
         Time.timeScale = 0f;
         GameIsPaused = true;
        
