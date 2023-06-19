@@ -64,7 +64,7 @@ public class UiManager : MonoBehaviour
 
 
 
-    async public void PlayGame()
+     public void PlayGame()
     {
         Debug.Log("playing");
         CloseAllPanels();
@@ -72,7 +72,7 @@ public class UiManager : MonoBehaviour
         EventManager.Instance.musicSource.volume = 0.7f;
         panels[5].SetActive(true);
         panels[6].SetActive(true);
-        await Task.Delay(1000);
+       
         Time.timeScale = 1.0f;
     }
 
