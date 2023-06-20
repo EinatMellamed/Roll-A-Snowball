@@ -111,15 +111,18 @@ public class UiManager : MonoBehaviour
 
 
     }
-    public void OpenWinMenuPanel()
+     public void OpenWinMenuPanel()
     {
 
         CloseAllPanels();
         panels[4].SetActive(true);
+        panels[7].SetActive(true);
         EventManager.Instance.PlayMusic("WinTheme");
         EventManager.Instance.musicSource.loop = false;
 
         Time.timeScale = 0f;
+       
+
     }
 
 
