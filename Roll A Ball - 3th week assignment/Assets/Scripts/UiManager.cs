@@ -30,6 +30,7 @@ public class UiManager : MonoBehaviour
         panels[1].SetActive(true);
         EventManager.Instance.PlayMusic("Waiting");
         EventManager.Instance.musicSource.volume = 0.7f;
+        EventManager.Instance.musicSource.loop = true;
         EventManager.Instance.sfxSource.volume = 1f;
         gameIsOver = false;
         GameIsPaused = false;
@@ -56,6 +57,7 @@ public class UiManager : MonoBehaviour
         panels[5].SetActive(true);
         panels[6].SetActive(true);
         EventManager.Instance.musicSource.volume = 0.7f;
+        EventManager.Instance.musicSource.loop = true;
         EventManager.Instance.sfxSource.volume = 1f;
         Time.timeScale = 1f;
         GameIsPaused = false;
@@ -70,6 +72,7 @@ public class UiManager : MonoBehaviour
         CloseAllPanels();
         EventManager.Instance.PlayMusic("BackgroundMusic");
         EventManager.Instance.musicSource.volume = 0.7f;
+        EventManager.Instance.musicSource.loop = true;
         panels[5].SetActive(true);
         panels[6].SetActive(true);
        
@@ -100,7 +103,8 @@ public class UiManager : MonoBehaviour
             CloseAllPanels();
             panels[3].SetActive(true);
             EventManager.Instance.PlayMusic("GameOverTheme");
-           
+            EventManager.Instance.musicSource.loop = false;
+
             Time.timeScale = 0f;
             gameIsOver = true;
         }
@@ -113,7 +117,8 @@ public class UiManager : MonoBehaviour
         CloseAllPanels();
         panels[4].SetActive(true);
         EventManager.Instance.PlayMusic("WinTheme");
-        
+        EventManager.Instance.musicSource.loop = false;
+
         Time.timeScale = 0f;
     }
 
